@@ -28,44 +28,35 @@ sudo apt install nodejs npm
 Libraries:
 
 The client code uses the nlohmann/json library. You can install it using the following command:
-bash
-Copy
-Edit
 sudo apt-get install nlohmann-json3-dev
+
 The server is built using the Node.js environment, so you’ll need to have npm installed for the necessary dependencies.
 Setting up and Running the Project
+
 1. Start the Server (main.js)
 First, clone or download the main.js file from this repository.
 Navigate to the project directory and install any dependencies for the server:
-bash
-Copy
-Edit
 npm install
-Run the server:
+
+2, Run the server:
 bash
 Copy
 Edit
 node main.js
 The server will listen for incoming connections on port 3000 by default, sending packets as per the mock exchange protocol.
-2. Compile and Run the Client (client.cpp)
+3. Compile and Run the Client (client.cpp)
 Navigate to the Client Directory:
 
 Open a terminal window and navigate to the folder containing the client.cpp file.
 Compile the Client:
 
 Use the following g++ command to compile the client.cpp into an executable named client:
-bash
-Copy
-Edit
 g++ -o client client.cpp -lnlohmann_json
 This will generate an executable named client in the same directory.
 
 Run the Client:
 
 Start the client by running:
-bash
-Copy
-Edit
 ./client
 Interacting with the Client:
 
@@ -79,21 +70,15 @@ After starting the client, it will prompt you to select an action. For example, 
 Example Flow
 Start the Server:
 
-bash
-Copy
-Edit
+
 node main.js
 Compile the Client:
 
-bash
-Copy
-Edit
+
 g++ -o client client.cpp -lnlohmann_json
 Run the Client:
 
-bash
-Copy
-Edit
+
 ./client
 Menu Options:
 
@@ -102,9 +87,7 @@ Option 2: Resend a specific missing packet (If you know a missing sequence numbe
 Option 3: Exit the client.
 Sample Output (when choosing option 1):
 
-bash
-Copy
-Edit
+
 === ABX Mock Exchange Client ===
 1. Stream All Packets (Retrieve Full Order Book)
 2. Resend Specific Packet (Request Missing Data)
